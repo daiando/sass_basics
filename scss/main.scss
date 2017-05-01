@@ -1,10 +1,13 @@
-@import 'variables';
-@import 'mixins';
+@import 'partials/variables';
+@import 'partials/mixins';
+
+@include google-font("Alegreya+Sans");
+@include google-font("Titillium+Web");
 
 @include fancy-links;
 
 body {
-  font-family: sans-serif;
+  font-family: $text-font;
   color: $text-color;
 }
 
