@@ -1,4 +1,7 @@
 @import 'variables';
+@import 'mixins';
+
+@include fancy-links;
 
 body {
   font-family: sans-serif;
@@ -6,29 +9,46 @@ body {
 }
 
 h1, h2, h3, h4 {
-	font-family: $headline-font
+  font-family: $headline-font;
+}
+
+h2 {
+  @include large-text;
 }
 
 p {
 }
 
 a {
-  color: $link-color 
+  color: $link-color; 
+}
+
+.warning-button {
+  @include warning;
+  padding: 8px 12px;
+}
+
+@include apply-to-ie-6 {
+  body {
+    font-size: 125%;
+  }
 }
 
 #header {
+  @include box($border: 1px solid pink, $radius: 12px);
+  @include box-shadow(2px 0px 4px #999, 1px 1px 6px $secondary-color);
   height: $header-height;
   background-color: $theme-color;
 
   #main-menu {
 
-  	li {
-  		display: inline;
-  	}
+    li {
+      display: inline;
+    }
 
-  	a {
-  		color: $menu-item-color;
-  	}
+    a {
+      color: $menu-item-color;
+    }
 
   }
   
@@ -51,7 +71,7 @@ a {
 
 #footer {
 
-	height: $footer-height;
-	background-color: $ternary-color;
+  height: $footer-height;
+  background-color: $ternary-color;
 
 }

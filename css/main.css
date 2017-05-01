@@ -1,3 +1,7 @@
+a {
+  font-style: italic;
+  text-decoration: none; }
+
 body {
   font-family: sans-serif;
   color: #222222; }
@@ -5,10 +9,27 @@ body {
 h1, h2, h3, h4 {
   font-family: "Palatino Linotype", Georgia, serif; }
 
+h2 {
+  font-size: 22px;
+  font-weight: bold; }
+
 a {
   color: #f27731; }
 
+.warning-button {
+  background-color: orange;
+  color: #fff;
+  padding: 8px 12px; }
+
+* html body {
+  font-size: 125%; }
+
 #header {
+  border-radius: 12px;
+  border: 1px solid pink;
+  box-shadow: 2px 0px 4px #999, 1px 1px 6px #f27731;
+  -moz-box-shadow: 2px 0px 4px #999, 1px 1px 6px #f27731;
+  -webkit-box-shadow: 2px 0px 4px #999, 1px 1px 6px #f27731;
   height: 60px;
   background-color: #170a48; }
   #header #main-menu li {
