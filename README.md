@@ -34,3 +34,6 @@
 }
 ```
 
+#### 4. shortcut memo
+
+- autoindent : `super(command)+shift+r`
